@@ -2,10 +2,10 @@ version: "3.7"
 
 services:
   jupyter:
-   build: .
-   container_name: jupyterlab
-   ports:
-     - 8000:8888
-   volumes:
-     - ./workbooks:/home/jovyan/work
-   command: start-notebook.sh --ServerApp.base_url=/home
+    build: .
+    container_name: jupyterlab
+    command: start-notebook.sh --ServerApp.base_url=/home
+    ports:
+      - 8000:8888
+    volumes:
+      - ./workbooks:/home/jovyan/work
